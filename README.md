@@ -1,5 +1,3 @@
-Here’s a README file to document your ELT pipeline project for GitHub:
-
 ---
 
 # **ELT Pipeline with dbt, Snowflake, and Airflow**
@@ -44,50 +42,11 @@ The ELT pipeline automates data processing by:
 - **dbt**: Install dbt with Snowflake adapter (`pip install dbt-snowflake`).
 - **Airflow**: Set up Airflow for orchestration and scheduling.
 
-### **Setup Steps**
-1. **Clone the repository**:  
-   ```bash
-   git clone <repository_url>
-   cd <repository_name>
-   ```
-
-2. **Snowflake Configuration**:  
-   Run the SQL commands in `setup_snowflake.sql` to configure the warehouse, roles, and database in Snowflake.
-
-3. **Configure dbt**:  
-   Update the `dbt_profile.yaml` file with Snowflake account details.
-
-4. **Run dbt Models**:  
-   Initialize dbt models and run transformations using:
-   ```bash
-   dbt run
-   ```
-
-5. **Deploy Airflow DAG**:  
-   - Place the `dbt_dag.py` file in the `dags` folder of Airflow.
-   - Define Snowflake connection details in Airflow UI.
-
-6. **Schedule Pipeline**:  
-   Activate the DAG to schedule transformations as needed.
-
-## **Running Tests**
-
-To ensure data accuracy, run dbt tests:
-```bash
-dbt test
-```
-This will validate data consistency and quality across models.
-
 ## **References**
 
 - [dbt Documentation](https://docs.getdbt.com)
 - [Snowflake Documentation](https://docs.snowflake.com)
 - [Apache Airflow Documentation](https://airflow.apache.org/docs/)
 
-## **License**
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 --- 
 
-This README provides a structured overview of the project, setup instructions, and key references to help users get started.
